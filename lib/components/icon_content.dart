@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/constant_styles/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
