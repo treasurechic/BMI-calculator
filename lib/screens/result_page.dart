@@ -3,6 +3,15 @@ import 'package:bmi_calculator/constant_styles/constants.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
+  ResultPage(
+      {@required this.bmiResult,
+      @required this.resultText,
+      @required this.interpretation});
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,19 +45,19 @@ class ResultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'NORMAL',
+                    resultText.toUpperCase(),
                     style: TextStyle(
                         color: Color(0xFF24D876),
                         fontSize: 22,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    '20',
+                    bmiResult,
                     style:
                         TextStyle(fontSize: 100, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    'You have a normal body weight, good job',
+                    interpretation,
                     style: TextStyle(
                       fontSize: 20,
                     ),
